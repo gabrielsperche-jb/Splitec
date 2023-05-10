@@ -38,10 +38,20 @@
 			<version>20230227</version>
 		</dependency>
 		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+		<dependency>
 			<groupId>com.splitec</groupId>
 			<artifactId>classroom-connector</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>3.12.13</version>
 		</dependency>
 
 	</dependencies>
