@@ -1,6 +1,5 @@
 package com.splitec.zarka.repository;
 
-import com.splitec.service.ClassroomService;
 import com.splitec.zarka.Constants;
 import org.json.JSONObject;
 
