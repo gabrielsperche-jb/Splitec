@@ -35,7 +35,7 @@ public class JWTUtils {
     }
   }
 
-  public static String getUsernameFromToken(String token) {
+  public static String getUserIdFromToken(String token) {
     Claims claims = Jwts.parser()
         .setSigningKey(secret)
         .parseClaimsJws(token)

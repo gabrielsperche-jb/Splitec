@@ -12,11 +12,17 @@ public class WorkflowExecutor {
 
   public String executeFlow(JSONArray config) throws ClassNotFoundException, InvocationTargetException,
       InstantiationException, IllegalAccessException, NoSuchMethodException {
+    String connectorResponse = "";
     for (Object obj : config) {
-      JSONObject connectorConfig = new JSONObject(obj);
-      Object connectorResponse = repository.callConnector(connectorConfig.getString("connectorName"), connectorConfig);
+      JSONObject connectorConfig;
+      if (obj instanceof JSONObject) {
+        connectorConfig = (JSONObject) obj;
+      } else {
+        connectorConfig = new JSONObject(obj.toString());
+      }
+      connectorResponse = repository.callConnector(connectorConfig.getString("connectorName"), connectorConfig).toString();
     }
-    return "";
+    return connectorResponse;
   }
 
   public String createToken(JSONObject config) {
