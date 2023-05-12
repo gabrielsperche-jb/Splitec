@@ -1,12 +1,12 @@
 name: CI/CD Pipeline
 
+
 on:
-  push:
+  pull_request:
+    types: [ closed ]
+    conditions: [ merged ]
     branches:
       - master
-  pull_request:
-    types:
-      - closed
 
 jobs:
   build:
