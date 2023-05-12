@@ -1,1 +1,1 @@
-web: ./mvnw spring-boot:run
+web: ./mvnw -pl zarka spring-boot:run
